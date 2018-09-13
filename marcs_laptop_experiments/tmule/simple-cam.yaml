@@ -1,0 +1,9 @@
+---
+init_cmd: |
+  source "/opt/ros/kinetic/setup.bash"
+windows:
+- name: camera
+  panes:
+  - roslaunch video_stream_opencv camera.launch 
+  - rosrun image_view2 image_view2 image:=camera/image_raw
+  
